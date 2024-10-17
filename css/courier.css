@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: georgia, serif;
+  background-color: #121212; /* Dark background */
+  color: #121212; /* Light text for contrast */
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}

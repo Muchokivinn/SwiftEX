@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Royal Swift Express Blog</title>
+    <link rel="stylesheet" href="css/transition.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
+    <style>
+        /* Keyframes for logo dance animation */
+        @keyframes dance {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(-10px); }
+            50% { transform: translateY(0); }
+            75% { transform: translateY(10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .logo {
+            animation-play-state: running;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+
+        /* Blog section styles */
+        .blog-section {
+            padding: 25px 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #fff;
+            text-align: center;
+        }
+
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .post {
+            flex: 1 1 300px;
+            margin: 20px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        /* Gallery styles */
+        .gallery-container {
+            overflow: hidden;
+            position: relative;
+            max-width: 384px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .gallery-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item {
+            min-width: 48%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-image {
+            max-width: 50%;
+            border-radius: 28px;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fce006;
+            color: #000000;
+            font-weight: bolder;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000;
+            color: #000000;
+            padding: 40px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: #000; color: #fff;">
+        <!-- Logo -->
+        <div>
+            <a href="/" style="text-decoration: none;">
+                <img src="/images/logopic1.png" alt="Your Matatu Company" style="height: 40px;" class="logo">
+            </a>
+        </div>
+        <!-- Navigation Links -->
+        <nav style="flex-grow: 1; display: flex; justify-content: center;">
+            <a href="/index.html" style="text-decoration: none; color: #fff; margin: 0 15px;">Home</a>
+            <a href="/about.html" style="text-decoration: none; color: #fff; margin: 0 15px;">About</a>
+            <a href="/service.html" style="text-decoration: none; color: #fff; margin: 0 15px;">Services</a>
+            <a href="/blog.html" style="text-decoration: none; color: #fff; margin: 0 15px;">Blog</a>
+            <a href="/contact%20.html" style="text-decoration: none; color: #fff; margin: 0 15px;">Contact</a>
+        </nav>
+         <!-- Booking -->
+        <div>
+    <a href="/service.html" 
+       style="background-color: #F4CE14; color: #000; padding: 10px 20px; border-radius: 5px; 
+              text-decoration: none; font-size: 16px; font-weight: bold;
+              transition: transform 0.3s ease, box-shadow 1.5s ease;">
+        <strong>Book A Service</strong>
+    </a>
+</div>
+    </header>
+
+  <section class="blog-section" style="position: relative; overflow: hidden;">
+    <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <img src="/images/back3.jpg" alt="Background Image" style="width: 100%; height: auto; position: absolute; top: 0; left: 0; z-index: 0; object-fit: cover; opacity: 0.5;">
+    
+    <div style="position: relative; z-index: 2; padding: 25px 10px; color: #fff; text-align: center;">
+        <h2 style="font-size: 28px; margin-bottom: 20px;">Latest Blog Posts</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <!-- Blog Post 1 -->
+            <div style="flex: 1 1 300px; margin: 20px; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 20px; margin-bottom: 10px;">Exploring Nairobi: Top Matatu Routes</h3>
+                <p style="font-size: 14px; color: #666;">Discover the most popular matatu routes in Nairobi that offer the best experience for travelers.</p>
+                <a href="/blog/exploring-nairobi" style="text-decoration: none; color: #007bff;">Read More</a>
+            </div>
+            <!-- Blog Post 2 -->
+            <div style="flex: 1 1 300px; margin: 20px; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 20px; margin-bottom: 10px;">Matatu Etiquette: Do’s and Don’ts</h3>
+                <p style="font-size: 14px; color: #666;">Learn the essential etiquette for riding matatus to ensure a pleasant journey for everyone.</p>
+                <a href="/blog/matatu-etiquette" style="text-decoration: none; color: #007bff;">Read More</a>
+            </div>
+            <!-- Blog Post 3 -->
+            <div style="flex: 1 1 300px; margin: 20px; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: 20px; margin-bottom: 10px;">Why Choose Matatus for Group Travel</h3>
+                <p style="font-size: 14px; color: #666;">Discover the benefits of using matatus for group travel and how they can save you money.</p>
+                <a href="/blog/why-choose-matatus" style="text-decoration: none; color: #007bff;">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section style="padding: 20px;">
+    <h2 style="font-size: 28px; margin-bottom: 20px; text-align: center;">Gallery</h2>
+    <div class="gallery-container">
+        <div class="gallery-wrapper">
+            <!-- Gallery Image 1 -->
+            <div class="gallery-item">
+                <img src="/images/Brawl.jpg" alt="Gallery Image 1" class="gallery-image">
+            </div>
+            <!-- Gallery Image 2 -->
+            <div class="gallery-item">
+                <img src="/images/matrix%20(2).jpg" alt="Gallery Image 2" class="gallery-image">
+            </div>
+            <!-- Gallery Image 3 -->
+            <div class="gallery-item">
+                <img src="/images/RESTORATION.jpg" alt="Gallery Image 3" class="gallery-image">
+            </div>
+            <!-- Gallery Image 4 -->
+            <div class="gallery-item">
+                <img src="/images/STEAMPUNK.jpg" alt="Gallery Image 4" class="gallery-image">
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="prevImage()" class="gallery-button">Previous</button>
+        <button onclick="nextImage()" class="gallery-button">Next</button>
+    </div>
+</section>
+
+
+    <script>
+        let currentIndex = 0;
+        const galleryWrapper = document.querySelector('.gallery-wrapper');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const totalImages = galleryItems.length;
+
+        function updateGallery() {
+            const offset = -currentIndex * 100;
+            galleryWrapper.style.transform = `translateX(${offset}%)`;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateGallery();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateGallery();
+        }
+    </script>
+
+    <footer id="footer">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <div style="flex: 0 0 150px; padding: 10px;">
+            <a href="/">
+                <img src="/images/logopic1.png" alt="Your Matatu Company" style="height: 60px;">
+            </a>
+        </div>
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <h3 style="font-size: 18px;">Royal Swift Express Limited.</h3>
+            <p style="font-size: 14px; color: #aaa;">Providing safe and reliable transportation across Kenya. Hire a matatu for events, private travel, or business trips.</p>
+        </div>
+        <div style="flex: 1; min-width: 150px; padding: 10px;">
+            <h4 style="font-size: 16px;">Company</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">About Us</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Careers</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Blog</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Contact</a></li>
+            </ul>
+        </div>
+        <div style="flex: 1; min-width: 150px; padding: 10px;">
+            <h4 style="font-size: 16px;">Services</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Matatu Hire</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Special Events</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Corporate Travel</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Custom Packages</a></li>
+            </ul>
+        </div>
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <h4 style="font-size: 16px;">Follow Us</h4>
+            <a href="#" style="text-decoration: none; color: #fff; font-size: 14px; margin-right: 15px;">
+                <img src="/icons/facebook.png" alt="Facebook" style="width: 24px; vertical-align: middle;"> Facebook
+            </a><br>
+            <a href="#" style="text-decoration: none; color: #fff; font-size: 14px; margin-right: 15px;">
+                <img src="/icons/twitter.png" alt="Twitter" style="width: 24px; vertical-align: middle;"> Twitter
+            </a><br>
+            <a href="#" style="text-decoration: none; color: #fff; font-size: 14px; margin-right: 15px;">
+                <img src="/icons/instagram.png" alt="Instagram" style="width: 24px; vertical-align: middle;"> Instagram
+            </a>
+        </div>
+    </div>
+    <div style="text-align: center; padding: 20px 0; color: #aaa; font-size: 12px;">
+        © 2024 Royal Swift Express LTD. All rights reserved. | <a href="#" style

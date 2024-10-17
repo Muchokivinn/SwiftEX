@@ -1,0 +1,83 @@
+/* responsive.css */
+
+/* General Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Default Layout */
+.container {
+    width: 100%;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Grid System */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    padding: 1em;
+}
+
+/* Basic Button Style */
+.button {
+    background-color: #F8C74B;
+    color: #1E1E1E;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 0.5em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (max-width: 1024px) {
+    .column {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 0.5em 1em;
+    }
+}
+/* Hide footer on screens 768px or smaller */
+@media (max-width: 768px) {
+    #footer {
+       display: none !important;
+    }
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Swift Express</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/transition.css">
+  <link rel="stylesheet" href="css/responsive.css">
+<style>
+    section {
+        position: relative;
+        padding: 50px;
+        text-align: center;
+        color: white;
+        background-color: #000; /* Fallback color */
+        background-image: url(images/back3.jpg); /* Background image */
+        background-size: cover; /* Make the background cover the entire section */
+        background-position: center; /* Center the background image */
+        background-attachment: fixed; /* Fix the background image */
+    }
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        z-index: 1;
+    }
+    h2, p {
+        position: relative;
+        z-index: 2; /* Ensure text appears above the overlay */
+    }
+    .service-card {
+        background: #eaeaea;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, background 0.3s;
+        color: #333;
+        text-decoration: none;
+        flex: 1 1 200px;
+        margin: 20px;
+        position: relative;
+        z-index: 2; /* Ensure cards appear above the overlay */
+    }
+    .service-card button {
+    background-color: #F4CE14; /* Button background color */
+    color: #000; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+    z-index: 3; /* Ensure button is on top of the overlay */
+}
+
+.service-card button:hover {
+    background-color: #D4AF37; /* Slightly darker color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Adds a pop shadow */
+}
+
+    }
+</style>
+</head>
+<body>
+  <!-- Header Section -->
+  
+   <header style="background-color: #F5F7F8; color: #000; padding: 15px 0; position: sticky; top: 0; width: 100%; z-index: 1000;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+        <!-- Logo -->
+       <div>
+    <a href="/" style="text-decoration: none;">
+        <img src="/images/logopic1.png" alt="Royal Swift" style="height: 40px; animation: dance 1s infinite; animation-play-state: paused;" class="logo">
+    </a>
+</div>
+
+<style>
+    @keyframes dance {
+        0% { transform: translateY(0); }
+        25% { transform: translateY(-8px); }
+        50% { transform: translateY(0); }
+        75% { transform: translateY(1px); }
+        100% { transform: translateY(0); }
+    }
+
+    /* Apply the animation on page load */
+    .logo {
+        animation-play-state: running;
+        animation-duration: 0.9s; /* Set duration for one cycle */
+        animation-timing-function: ease-in-out;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        const logo = document.querySelector('.logo');
+        logo.style.animationPlayState = 'running'; // Start the animation on load
+    };
+</script>
+
+        
+       <!-- Navigation Links -->
+<!-- Navigation Links -->
+<!-- Navigation Links -->
+<nav style="flex-grow: 1; display: flex; justify-content: center;">
+    <a href="/index.html" style="text-decoration: none; color: #272829; margin: 0 15px; font-size: 16px;">Home</a>
+    <a href="/about.html" style="text-decoration: none; color: #272829; margin: 0 15px; font-size: 16px;">About</a>
+    <a href="/service.html" style="text-decoration: none; color: #272829; margin: 0 15px; font-size: 16px;">Services</a>
+    <a href="/contact%20.html" style="text-decoration: none; color: #272829; margin: 0 15px; font-size: 16px;">Contact</a>
+    
+    
+    
+        <a href="/blog.html" style="text-decoration: none; color: #272829; margin: 0 15px; font-size: 16px;">Blog</a>
+       
+   
+</nav>
+
+
+
+        <!-- Booking -->
+        <div>
+    <a href="/service.html" 
+       style="background-color: #F4CE14; color: #000; padding: 10px 20px; border-radius: 5px; 
+              text-decoration: none; font-size: 16px; font-weight: bold;
+              transition: transform 0.3s ease, box-shadow 1.5s ease;">
+        <strong>Book A Service</strong>
+    </a>
+</div>
+
+    </div>
+</header>
+
+  
+
+        <!-- Booking -->
+   
+
+<!-- Services Section -->
+<section style="position: relative; padding: 50px; text-align: center; color: white; background-color: #000;">
+    <h2 style="font-size: 28px; margin-bottom: 20px;">Our Services</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <!-- Service 1 -->
+       <div class="service-card">
+    <h3 style="font-size: 20px; margin-bottom: 10px;">Matatu Hire</h3>
+    <p style="font-size: 14px;">Choose from our fleet of well-maintained matatus for a comfortable ride.</p>
+    <a href="matatu_hire.php" style="padding: 10px 15px; background-color: #F4CE14; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-decoration: none; color: #000; display: inline-block;">Book</a>
+</div>
+
+
+
+        <!-- Service 2 -->
+       <div class="service-card">
+    <h3 style="font-size: 20px; margin-bottom: 10px;">Special Events Transportation</h3>
+    <p style="font-size: 14px;">Reliable transport solutions for weddings, parties, and corporate events.</p>
+    <a href="hire.php" style="padding: 10px 15px; background-color: #F4CE14; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-decoration: none; color: #000; display: inline-block;">Book</a>
+</div>
+
+        <!-- Service 3 -->
+       <div class="service-card">
+    <h3 style="font-size: 20px; margin-bottom: 10px;">Corporate Travel Solutions</h3>
+    <p style="font-size: 14px;">Professional transport for business meetings and corporate outings.</p>
+    <a href="vip.html" style="padding: 10px 15px; background-color: #F4CE14; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-decoration: none; color: #000; display: inline-block;">Book</a>
+</div>
+
+
+        <!-- Service 4 -->
+        <div class="service-card">
+    <h3 style="font-size: 20px; margin-bottom: 10px;">Airport Transfers</h3>
+    <p style="font-size: 14px;">Seamless and timely transfers to and from the airport.</p>
+    <a href="vip.html" style="padding: 10px 15px; background-color: #F4CE14; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-decoration: none; color: #000; display: inline-block;">Book</a>
+</div>
+
+
+        <!-- Service 5 -->
+        <div class="service-card">
+    <h3 style="font-size: 20px; margin-bottom: 10px;">Courier Services</h3>
+    <p style="font-size: 14px;">Send and receive cargo through our courier services.</p>
+    <a href="courier.html" style="padding: 10px 15px; background-color: #F4CE14; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; text-decoration: none; color: #000; display: inline-block;">Book</a>
+</div>
+
+            </div>
+            </section>
+
+
+
+
+<footer id="footer" style="background-color: #1E201E; color: #F4CE14; padding: 40px 0;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <!-- Logo Holder -->
+        <div style="flex: 0 0 150px; padding: 10px;">
+            <a href="/" style="text-decoration: none;">
+                <img src="/images/logopic1.png" alt="Your Matatu Company" style="height: 60px;">
+            </a>
+        </div>
+
+        <!-- Company Info -->
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <h3 style="font-size: 18px;">Royal Swift Express Limited.</h3>
+            <p style="font-size: 14px; color: #aaa;">
+                Providing safe and reliable transportation across Kenya. Hire a matatu for events, private travel, or business trips.
+            </p>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div style="flex: 1; min-width: 150px; padding: 10px;">
+            <h4 style="font-size: 16px;">Company</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">About Us</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Careers</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Blog</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Contact</a></li>
+            </ul>
+        </div>
+        
+        <div style="flex: 1; min-width: 150px; padding: 10px;">
+            <h4 style="font-size: 16px;">Services</h4>
+            <ul style="list-style: none; padding: 0;">
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Matatu Hire</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Special Events</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Corporate Travel</a></li>
+                <li><a href="#" style="text-decoration: none; color: #fff; font-size: 14px;">Custom Packages</a></li>
+            </ul>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div style="flex: 1; min-width: 200px; padding: 10px;">
+            <h4 style="font-size: 16px;">Follow Us</h4>
+            <a href="#" style="text-decoration: none; color: #fff; font-size: 14px; margin-right: 15px;">
+                <img src="/icons/facebook.png" alt="Facebook" style="width: 24px; vertical-align: middle;"> Facebook
+            </a><br>
+            <a href="#" style="text-decoration: none; color: #fff; font-size: 14px; margin-right: 15px;">
+                <img src="/icons/twitter.png" alt="Twitter" style="width: 24px; vertical-align: middle;"> Twitter
+            </a><br>
+            <a href="#" style="text-decoration: none; color: #fff; font-size: 14px; margin-right: 15px;">
+                <img src="/icons/instagram.png" alt="Instagram" style="width: 24px; vertical-align: middle;"> Instagram
+            </a>
+        </div>
+    </div>
+    <div style="text-align: center; padding: 20px 0; color: #aaa; font-size: 12px;">
+        © 2024 Royal Swift Express LTD. All rights reserved. | <a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #fff; text-decoration: none;">Terms of Service</a>
+    </div>
+  </footer>
+
+</body>
+</html>

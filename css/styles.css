@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: georgia, serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text for contrast */
+}
+body {
+            font-family: Georgia, serif; /* Set Georgia as the font for the entire body */
+        }
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+  
+}
+
+
+/* Navigation Bar */
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: -21px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #272829; /* Original color */
+    margin: 0 15px;
+    font-size: 16px;
+  font-weight: bold;
+    padding: 8px 12px;
+    transition: transform 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
+    border-bottom: 2px solid transparent; /* Add underline effect on hover */
+}
+
+nav a:hover {
+    transform: scale(1.05); /* Slight enlarge effect */
+    border-bottom: 2px solid #F4CE14; /* Underline effect with the same color */
+}
+
+
+/* Responsive Navigation - Stacked Layout */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 18px;
+        padding: 10px 0;
+        width: 100%; /* Full width links */
+        text-align: center; /* Center-align text */
+    }
+}
+
+a:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    box-shadow: 0 8px 15px #3C3D37; /* Adds a shadow to make it pop */
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Navigation */
+  nav ul {
+    display: none; /* Hide the main navigation by default */
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu toggle button */
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex; /* Show the navigation when toggle is active */
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+/* Pop-out scale effect for active image */
+.gallery-item.active img {
+    transform: scale(1.1); /* Pop-out effect */
+}
+
+.gallery-image {
+    transition: transform 0.5s ease;
+}
+
+
+/* Hide footer on screens 768px or smaller */
+@media (max-width: 768px) {
+    #footer {
+       display: none !important;
+    }
+}
